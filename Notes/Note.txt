@@ -1,0 +1,9 @@
+An application/component has three parts. 
+    1. State
+    2. View
+    3. Action
+
+// Img source: ./component-structure.png
+
+
+The State in a React application refers to the parts of the app that can change over time and affect the rendered output. This state data can be anything from user input, server responses, and more. State is managed within the component and can be passed down to child components through props.
