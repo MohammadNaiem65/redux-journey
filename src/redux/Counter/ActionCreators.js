@@ -1,15 +1,13 @@
 import { DECREMENT, INCREMENT } from './ActionTypes';
 
-export function increment(value) {
+export function increment() {
 	return {
 		type: INCREMENT,
-		payload: value,
 	};
 }
 
-export function decrement(value) {
+export function decrement() {
 	return {
 		type: DECREMENT,
-		payload: value,
 	};
 }

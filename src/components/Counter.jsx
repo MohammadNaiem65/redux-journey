@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { decrement, increment } from '../redux/Counter/ActionCreators';
 
 export default function Counter() {
-	const [count, setCount] = useState(0);
+	const count = useSelector((state) => state.value);
+	const dispatch = useDispatch();
 
-	const increment = () => {
-		setCount((prevCount) => prevCount + 1);
+	const incrementHandler = () => {
+		dispatch(increment());
 	};
 
-	const decrement = () => {
-		setCount((prevCount) => prevCount - 1);
+	const decrementHandler = () => {
+		dispatch(decrement());
 	};
 
 	return (
@@ -17,12 +19,12 @@ export default function Counter() {
 			<div className='flex space-x-3'>
 				<button
 					className='bg-indigo-400 text-white px-3 py-2 rounded shadow'
-					onClick={increment}>
+					onClick={incrementHandler}>
 					Increment
 				</button>
 				<button
 					className='bg-red-400 text-white px-3 py-2 rounded shadow'
-					onClick={decrement}>
+					onClick={decrementHandler}>
 					Decrement
 				</button>
 			</div>
