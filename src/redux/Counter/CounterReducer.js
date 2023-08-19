@@ -1,7 +1,7 @@
-import { DECREMENT, INCREMENT } from './ActionTypes';
+import { DECREMENT, INCREMENT } from './actionTypes';
 
 const initialState = {
-	value: 0,
+	value: 20,
 };
 
 function CounterReducer(state = initialState, action) {

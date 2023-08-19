@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT } from './ActionTypes';
+import { DECREMENT, INCREMENT } from './actionTypes';
 
 export function increment() {
 	return {

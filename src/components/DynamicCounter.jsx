@@ -1,16 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from '../redux/counter/actionCreators';
+import {
+	dynamicDecrement,
+	dynamicIncrement,
+} from '../redux/dynamicCounter/actionCreators';
 
-export default function Counter() {
-	const count = useSelector((state) => state.counter.value);
+export default function DynamicCounter() {
+	const count = useSelector((state) => state.dynamicCounter.value);
 	const dispatch = useDispatch();
 
 	const incrementHandler = () => {
-		dispatch(increment());
+		dispatch(dynamicIncrement());
 	};
 
 	const decrementHandler = () => {
-		dispatch(decrement());
+		dispatch(dynamicDecrement());
 	};
 
 	return (
